@@ -1,9 +1,4 @@
 ﻿using MattBank.Model.Interface;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MattBank.Controller
 {
@@ -21,9 +16,9 @@ namespace MattBank.Controller
             return response;
         }
 
-        public float SendTransfer(IMoneyAccount accountFrom, IMoneyAccount accountTo, float withdrawSum)
+        public float SendTransfer(IMoneyAccount accountFrom, IMoneyAccount accountTo, float transferSum)
         {
-            float response = accountFrom.Transfer(accountFrom, accountTo, withdrawSum);
+            float response = accountFrom.Transfer(accountFrom, accountTo, transferSum);
             return response;
         }
     }
